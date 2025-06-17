@@ -1,30 +1,77 @@
-# Pest detection project
-
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
-
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/alexediting69-gmailcoms-projects/v0-pest-detection-project)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/1RvOmAvhsJZ)
+# Pest Control Detector
 
 ## Overview
+Pest Control Detector is a computer vision project designed to detect and identify common pests that may infest homes or agricultural areas. This repository contains the code and resources needed to train and deploy a pest detection model.
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Features
 
-## Deployment
+- Object detection for various pest types
+- Pre-trained models for quick deployment
+- Custom training capabilities for specific pest types
+- Easy-to-use inference scripts
+- Web interface for real-time detection (optional)
 
-Your project is live at:
+## Installation
 
-**[https://vercel.com/alexediting69-gmailcoms-projects/v0-pest-detection-project](https://vercel.com/alexediting69-gmailcoms-projects/v0-pest-detection-project)**
+1. Clone this repository:
+```bash
+git clone https://github.com/stephenrodrick/pest-control-detector.git
+cd pest-control-detector
+```
 
-## Build your app
+2. Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-Continue building your app on:
+## Usage
 
-**[https://v0.dev/chat/projects/1RvOmAvhsJZ](https://v0.dev/chat/projects/1RvOmAvhsJZ)**
+### For Inference:
+```python
+from detector import PestDetector
 
-## How It Works
+detector = PestDetector('model_weights.pth')
+results = detector.detect('path_to_image.jpg')
+print(results)
+```
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+### For Training:
+```python
+from train import PestTrainer
+
+trainer = PestTrainer(config='config.yaml')
+trainer.train()
+```
+
+## Dataset
+
+The model is trained on a custom dataset of common household and agricultural pests. The dataset includes:
+
+- Cockroaches
+- Rodents
+- Termites
+- Bed bugs
+- Aphids
+- Spider mites
+
+To use your own dataset, structure it according to the COCO format and update the config file.
+
+## Pretrained Models
+
+Download pretrained models from the [Releases](https://github.com/stephenrodrick/pest-control-detector/releases) section.
+
+## Web Interface (Optional)
+
+To run the web interface:
+```bash
+python app.py
+```
+Then navigate to `http://localhost:5000` in your browser.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
