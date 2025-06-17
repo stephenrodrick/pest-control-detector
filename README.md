@@ -96,7 +96,7 @@ Please review our [Contribution Guidelines](CONTRIBUTING.md) before submitting P
 
 MIT License - See [LICENSE](LICENSE) for full terms.  
 
-Commercial use inquiries: contact@example.com  
+Commercial use inquiries: stephenrodrick17@gmail.com  
 
 ---
 
