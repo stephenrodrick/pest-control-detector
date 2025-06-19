@@ -22,16 +22,16 @@ The Pest Control Detection System is an advanced deep learning application desig
 - PyTorch 1.12+  
 
 ### Setup  
-```bash
+\`\`\`bash
 git clone https://github.com/stephenrodrick/pest-control-detector.git
 cd pest-control-detector
 pip install -r requirements.txt
-```
+\`\`\`
 
 ## Usage  
 
 ### Inference (Python API)  
-```python
+\`\`\`python
 from pest_detector import PestDetectionModel
 
 model = PestDetectionModel(
@@ -42,20 +42,20 @@ model = PestDetectionModel(
 results = model.detect("samples/infestation_001.jpg")
 results.display()  # Shows annotated image
 results.export_csv()  # Saves detection metrics
-```
+\`\`\`
 
 ### Training Custom Models  
 1. Prepare dataset in YOLO format  
 2. Modify `configs/training.yaml`  
 3. Run training:  
-```bash
+\`\`\`bash
 python train.py --config configs/training.yaml --epochs 100
-```
+\`\`\`
 
 ### Web Application  
-```bash
+\`\`\`bash
 uvicorn app:fastapi_app --host 0.0.0.0 --port 8000
-```
+\`\`\`
 Access the interactive interface at `http://localhost:8000`  
 
 ## Model Performance  
