@@ -80,7 +80,8 @@ Custom dataset preparation guide available in [DATASET.md](docs/DATASET.md)
 
 1. **Edge Devices**: Export to ONNX/TensorRT for Jetson or Raspberry Pi  
 2. **Cloud API**: Containerized FastAPI service  
-3. **Mobile**: CoreML/TFLite conversion scripts included  
+3. **Mobile**: CoreML/TFLite conversion scripts included
+4. **Website**:https://v0-pest-detection-project.vercel.app/
 
 ## Contributing  
 
@@ -91,6 +92,7 @@ We welcome contributions via:
 - Additional dataset contributions  
 
 Please review our [Contribution Guidelines](CONTRIBUTING.md) before submitting PRs.  
+
 
 ## License  
 
